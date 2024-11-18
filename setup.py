@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='RPCA',
     version='0.1dev',
-    packages=['RPCA',],
+    packages=['RobustPCA',],
     license='LICENSE.md',
     description='Robust Pincipal Component Analysis',
     long_description=open('README.md').read(),
