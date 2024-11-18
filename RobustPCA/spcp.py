@@ -160,7 +160,7 @@ class StablePCP:
             self.lamb = 1/np.sqrt(np.max(size))
 
         #
-        for i in range(self.max_iter):
+        for i in tqdm(range(self.max_iter)):
             YL = L1 + (t0-1)/t1*(L1-L0)
             YS = S1 + (t0-1)/t1*(S1-S0)
 
