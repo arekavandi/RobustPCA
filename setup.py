@@ -1,9 +1,9 @@
 from distutils.core import setup
 
 setup(
-    name='RobustPCA',
+    name='RPCA',
     version='0.1dev',
-    packages=['RobustPCA',],
+    packages=['RPCA',],
     license='LICENSE.md',
     description='Robust Pincipal Component Analysis',
     long_description=open('README.md').read(),
