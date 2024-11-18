@@ -194,7 +194,7 @@ class StablePCP:
             # update S0, SL
             S0 = S1
             S1 = self.s_tau(GS, self.lamb*mu/2) # threshold by lamb*mu/2
-            S1=(1/2)*(S1+S.T)
+            S1=(1/2)*(S1+S1.T)
 
             # update t0, t1
             t0 = t1
