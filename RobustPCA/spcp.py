@@ -151,7 +151,8 @@ class StablePCP:
             self.mu0 = np.sqrt(2*np.max(size))*self.sigma
 
         elif self.mu0==None:
-            self.mu0 = np.min([self.mu0_init*np.sqrt(2*np.max(size)), 0.99*np.linalg.norm(M, 2)])
+            (u, s, vh) = pca(GL, 1, True, n_iter = 5)
+            self.mu0 = np.min([self.mu0_init*np.sqrt(2*np.max(size)), 0.99*s[0]])
             if self.mu_min==None:
                 self.mu_min = np.sqrt(2*np.max(size))*self.sigma
 
