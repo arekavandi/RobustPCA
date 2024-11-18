@@ -1,6 +1,7 @@
 # Authors: Shun Chi (shunchi100@gmail.com)
 
 import numpy as np
+from tqdm import tqdm
 try:
     from fbpca import pca
 except ModuleNotFoundError:
