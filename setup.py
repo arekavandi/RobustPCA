@@ -9,6 +9,6 @@ setup(
     long_description=open('README.md').read(),
     author = ['Shun Chi'],
     install_requires=[
-        "numpy","scipy"
+        "numpy","scipy","tqdm"
     ],
 )
