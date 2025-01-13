@@ -41,7 +41,7 @@ To install the original package:
 pip install git+https://github.com/ShunChi100/RobustPCA
 ```
 
-To install modified package which impoises symmetric structure on S:
+To install modified package which imposes symmetric structure on S:
 ```
 pip install git+https://github.com/arekavandi/RobustPCA
 ```
