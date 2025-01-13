@@ -36,11 +36,15 @@ The drawback of Robust PCA and Stable PCP is their scalability. They are general
 
 ### Examples
 
-To install the package:
+To install the original package:
 ```
 pip install git+https://github.com/ShunChi100/RobustPCA
 ```
 
+To install modified package which impoises symmetric structure on S:
+```
+pip install git+https://github.com/arekavandi/RobustPCA
+```
 To use
 ```
 from RobustPCA.rpca import RobustPCA
