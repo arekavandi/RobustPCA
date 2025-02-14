@@ -1,6 +1,7 @@
 # Authors: Shun Chi (shunchi100@gmail.com)
 
 import numpy as np
+from tqdm import tqdm
 try:
     from fbpca import pca
 except ModuleNotFoundError:
@@ -166,9 +167,10 @@ class RobustPCA:
             self.lamb = 1/np.sqrt(np.max(size))
 
         # Alternating update
-        for i in range(self.max_iter):
+        for i in tqdm(range(self.max_iter)):
             L, rank = self.d_tau(M-S+1.0/self.mu*Y)
             S = self.s_tau(M-L+1.0/self.mu*Y, self.lamb/self.mu)
+            S1=(1/2)*(S1+S1.T)
 
             # Calculate residuals
             residuals = M-L-S
