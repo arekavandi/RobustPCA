@@ -170,7 +170,7 @@ class RobustPCA:
         for i in tqdm(range(self.max_iter)):
             L, rank = self.d_tau(M-S+1.0/self.mu*Y)
             S = self.s_tau(M-L+1.0/self.mu*Y, self.lamb/self.mu)
-            S1=(1/2)*(S1+S1.T)
+            S=(1/2)*(S+S.T)
 
             # Calculate residuals
             residuals = M-L-S
