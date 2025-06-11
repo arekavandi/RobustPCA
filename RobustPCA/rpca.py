@@ -167,6 +167,7 @@ class RobustPCA:
             self.lamb = 1/np.sqrt(np.max(size))
 
         # Alternating update
+        print('Starting fitting...')
         for i in tqdm(range(self.max_iter)):
             L, rank = self.d_tau(M-S+1.0/self.mu*Y)
             S = self.s_tau(M-L+1.0/self.mu*Y, self.lamb/self.mu)
