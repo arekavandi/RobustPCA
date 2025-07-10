@@ -170,6 +170,7 @@ class RobustPCA:
         print('Starting fitting...')
         for i in tqdm(range(self.max_iter)):
             L, rank = self.d_tau(M-S+1.0/self.mu*Y)
+            L=(1/2)*(L+L.T)
             S = self.s_tau(M-L+1.0/self.mu*Y, self.lamb/self.mu)
             S=(1/2)*(S+S.T)
 
